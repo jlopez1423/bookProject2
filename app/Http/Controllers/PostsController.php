@@ -13,15 +13,16 @@ class PostsController extends Controller
     //Homepage Landing
     public function index() 
     {
+        $posts = Post::latest()->get();
 
-    	return view( 'posts.index' );
+    	return view( 'posts.index', compact( 'posts' ) );
     }
 
     //Show all posts
-    public function show()
+    public function show( Post $post )
     {
 
-    	return view( 'posts.show' );
+    	return view( 'posts.show', compact( 'post' ) );
 
     }
 
