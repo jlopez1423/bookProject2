@@ -18,7 +18,7 @@ class CommentsController extends Controller
 
 		//validation
 		$this->validate( request(), ['body' => 'required|min:2']);
-
+ 
 		$post->addComment( request( 'body' ) );
 
 		// Comment::create([

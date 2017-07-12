@@ -18,6 +18,15 @@ class Post extends Model
 	}
 
 
+	//Post belongs to a user, can now do $post->user->( user_field )
+	public function user()
+	{
+
+		return $this->hasMany( User::class );
+	
+	}
+
+
 	public function addComment( $body )
 	{
 
