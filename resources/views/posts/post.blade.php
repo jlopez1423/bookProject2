@@ -5,10 +5,12 @@
 	</a>
 
 	<p>
+		{{ $post->user->name }} on
 
 		{{ $post->created_at->toFormattedDateString() }} 
 
 	</p>
+
 	<hr>
 
 </div>

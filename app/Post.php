@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     //
-	protected $fillable = [ 'title', 'body' ];
+	protected $fillable = [ 'title', 'body', 'user_id' ];
 
 	//Get all comments associated with this post
 	public function comments()
@@ -22,7 +22,7 @@ class Post extends Model
 	public function user()
 	{
 
-		return $this->hasMany( User::class );
+		return $this->belongsTo( User::class );
 	
 	}
 
